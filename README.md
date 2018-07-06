@@ -15,6 +15,6 @@ Step 1. Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency to your app-level build.gradle:
 ```gradle
 dependencies {
-	        compile 'com.github.genaku:CommandQueue:-SNAPSHOT'
+	        compile 'com.github.genaku:CommandQueue:0.9.1'
 	}
 ```
