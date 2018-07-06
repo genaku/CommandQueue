@@ -10,5 +10,6 @@ data class Item(
         var state: ItemState = ItemState.WHITE,
         var uiState: ItemState = ItemState.WHITE,
         var num: Int = 0,
-        var uiNum: Int = 0
+        var uiNum: Int = 0,
+        var progress: String = ""
 )

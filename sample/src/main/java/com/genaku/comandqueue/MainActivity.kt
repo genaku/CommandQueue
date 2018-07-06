@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         recycler_view.setHasFixedSize(true)
         val mLayoutManager = LinearLayoutManager(this)
         recycler_view.layoutManager = mLayoutManager
-        val mAdapter = CustomAdapter(CopyOnWriteArrayList(), { it ->
+        val mAdapter = ExampleListAdapter(CopyOnWriteArrayList()) { it ->
             mViewModel.updateItem(it)
-        })
+        }
 
         mViewModel = ViewModelProviders.of(this).get(ExampleViewModel::class.java).apply {
             items.observe(this@MainActivity, Observer { values ->
