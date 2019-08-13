@@ -34,12 +34,12 @@ class ExampleViewModel : ViewModel() {
         mItems[idx].uiState = newState
         mItems[idx].uiNum = newNum
         items.value = mItems
-        commands.addCommand(mItems[idx].id, {
+        commands.addCommand(mItems[idx].id) {
             mItems[idx].state = newState
             mItems[idx].num = newNum
             items.postValue(mItems)
             Thread.sleep(1000)
-        })
+        }
     }
 
     fun switchCommander() {
